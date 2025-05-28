@@ -1,8 +1,8 @@
 {
-  "name": "LAKA-MD",
-  "description": "Laka Md in powerful WhatsApp Bot in Sri Lanka made by lashmitha 🐣🪄💖",
-  "logo": "https://i.ibb.co/S7dLJ09m/image-1741156199535.jpg",
-  "keywords": ["lakamd", "bot", "whatsapp bot", "multi device", "laka-md"],
+  "name": "AMS-BOT",
+  "description": "AMS Md in powerful WhatsApp Bot 🐣🪄💖",
+  "logo": "https://i.ibb.co/mrF3XtXd/x.jpg",
+  "keywords": ["amsmd", "bot", "whatsapp bot", "multi device", "ams-md"],
   "success_url": "/",
 
   "env": {
