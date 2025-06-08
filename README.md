@@ -88,19 +88,18 @@ You can deploy this bot for free on the following platforms:
 You can set up a continuous integration workflow by creating a `.github/workflows/nodejs.yml` file with the following content:
 
 ```yaml
-name: Node.js CI
+name: Node.js Bot Auto Restart
 
 on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
   push:
-    branches:
-      - main
-  pull_request:
     branches:
       - main
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -108,19 +107,19 @@ jobs:
         node-version: [20.x]
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Start application
-      run: npm start
+      - name: Start Bot
+        run: npm start
 ```
 
 
