@@ -1,4 +1,4 @@
-name: Node.js Bot Auto Restart By AMS
+name: Node.js Bot Auto Restart BY AMS
 
 on:
   schedule:
